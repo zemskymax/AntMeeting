@@ -1,0 +1,33 @@
+﻿<Window x:Class="AntMeeting.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="AntMeeting" Height="859" Width="980">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="836"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <StackPanel x:Name="_Container" Grid.Column="0">
+        </StackPanel>
+
+        <Grid Grid.Column="1" x:Name="_Navigator" HorizontalAlignment="Center" Margin="-10,0,5,0" Width="150">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="150"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+                <RowDefinition Height="50"/>
+            </Grid.RowDefinitions>
+
+            <Grid HorizontalAlignment="Left" Height="150" VerticalAlignment="Top" Width="115" Margin="5,5,0,0">
+                <Label Content="Choose" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="3,10,0,0" />
+                <RadioButton GroupName="Algorithms" Checked="radioButton_Checked" x:Name="_noa" Content="NOA" HorizontalAlignment="Left" Margin="10,41,0,0" VerticalAlignment="Top" IsChecked="True"/>
+                <RadioButton GroupName="Algorithms" Checked="radioButton_Checked" x:Name="_noa_extended" Content="Extended NOA" HorizontalAlignment="Left" Margin="10,61,0,0" VerticalAlignment="Top"/>
+                <RadioButton GroupName="Algorithms" Checked="radioButton_Checked" x:Name="_cross" Content="Cross" HorizontalAlignment="Left" Margin="10,81,0,0" VerticalAlignment="Top"/>
+            </Grid>
+            <Button x:Name="_Start" Grid.Row="1" Margin="0,10,5,0" Background="#009090" BorderThickness="0" Foreground="White" Click="OnClickStart">Start</Button>
+            <Button x:Name="_Stop" Grid.Row="2" Margin="0,10,5,0" Background="#009090" BorderThickness="0" Foreground="White" Click="OnClickStop">Stop</Button>
+            <Button x:Name="_Reset" Grid.Row="3" Margin="0,10,5,0" Background="#009090" BorderThickness="0" Foreground="White" Click="OnClickReset">Reset</Button>
+        </Grid>
+    </Grid>
+</Window>
